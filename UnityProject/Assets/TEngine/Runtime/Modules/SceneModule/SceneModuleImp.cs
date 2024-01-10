@@ -106,7 +106,7 @@ namespace TEngine
             }
         }
 
-        private async UniTaskVoid InvokeProgress(SceneOperationHandle sceneOperationHandle,Action<float> progress)
+        private async UniTaskVoid InvokeProgress(SceneOperationHandle sceneOperationHandle, Action<float> progress)
         {
             if (sceneOperationHandle == null)
             {

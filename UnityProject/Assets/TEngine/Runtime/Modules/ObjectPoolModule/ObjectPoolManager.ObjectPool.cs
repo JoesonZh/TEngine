@@ -500,7 +500,7 @@ namespace TEngine
             internal override void Update(float elapseSeconds, float realElapseSeconds)
             {
                 _autoReleaseTime += realElapseSeconds;
-                if (_autoReleaseTime < _autoReleaseInterval)
+                if (_autoReleaseTime < _autoReleaseInterval || Count <= _capacity)      // 优化仅当节点数量大于容量时有效
                 {
                     return;
                 }

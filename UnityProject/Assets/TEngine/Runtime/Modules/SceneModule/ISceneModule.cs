@@ -4,7 +4,7 @@ using YooAsset;
 
 namespace TEngine
 {
-    public interface ISceneModule
+    internal interface ISceneModule
     {
         /// <summary>
         /// 当前主场景名称。

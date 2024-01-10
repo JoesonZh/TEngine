@@ -6,7 +6,7 @@ namespace TEngine
     /// <summary>
     /// 对象池管理器。
     /// </summary>
-    public interface IObjectPoolManager
+    internal interface IObjectPoolManager
     {
         /// <summary>
         /// 获取对象池数量。

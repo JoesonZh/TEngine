@@ -11,7 +11,7 @@ namespace TEngine
     [DisallowMultipleComponent]
     public sealed class ProcedureModule : Module
     {
-        private IProcedureManager _procedureManager = null;
+        private ProcedureManager _procedureManager = null;
         private ProcedureBase _entranceProcedure = null;
 
         [SerializeField] private string[] availableProcedureTypeNames = null;
@@ -57,7 +57,7 @@ namespace TEngine
         {
             base.Awake();
 
-            _procedureManager = ModuleImpSystem.GetModule<IProcedureManager>();
+            _procedureManager = ModuleImpSystem.GetModule<IProcedureManager>() as ProcedureManager;
             if (_procedureManager == null)
             {
                 Log.Fatal("Procedure manager is invalid.");
@@ -103,7 +103,7 @@ namespace TEngine
         }
 
         /// <summary>
-        /// 是否存在流程。
+        /// 是否存在流程。joe
         /// </summary>
         /// <typeparam name="T">要检查的流程类型。</typeparam>
         /// <returns>是否存在流程。</returns>
@@ -164,7 +164,8 @@ namespace TEngine
             }
 
             _procedureManager = null;
-            _procedureManager = ModuleImpSystem.GetModule<IProcedureManager>();
+            _procedureManager = ModuleImpSystem.GetModule<IProcedureManager>() as  ProcedureManager;
+            if (_procedureManager == null) return false;
             _procedureManager.Initialize(fsmManager, procedures);
             _procedureManager.StartProcedure(procedures[0].GetType());
             return true;

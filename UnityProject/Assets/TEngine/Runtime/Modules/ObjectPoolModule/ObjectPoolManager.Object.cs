@@ -183,6 +183,7 @@ namespace TEngine
             {
                 _object.Release(isShutdown);
                 MemoryPool.Release(_object);
+                Clear();
             }
         }
     }

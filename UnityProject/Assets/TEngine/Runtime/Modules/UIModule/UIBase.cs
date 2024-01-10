@@ -90,6 +90,8 @@ namespace TEngine
 
         /// <summary>
         /// 是否持有Update行为。
+        /// true则调用m_listUpdateChild中元素的更新
+        /// false则调用ListChild中元素的更新
         /// </summary>
         protected bool m_updateListValid = false;
 

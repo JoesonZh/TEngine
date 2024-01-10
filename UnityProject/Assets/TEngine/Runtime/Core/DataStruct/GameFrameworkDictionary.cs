@@ -29,6 +29,7 @@ namespace TEngine
         /// <returns>TValue。</returns>
         public TValue GetValueByIndex(int index)
         {
+            if (index < 0 || index >= KeyList.Count) return default;
             return Dictionary[KeyList[index]];
         }
 
@@ -39,6 +40,8 @@ namespace TEngine
         /// <param name="item">TValue。</param>
         public void SetValue(int index, TValue item)
         {
+            if (index < 0 || index >= KeyList.Count) return;
+            
             Dictionary[KeyList[index]] = item;
         }
 

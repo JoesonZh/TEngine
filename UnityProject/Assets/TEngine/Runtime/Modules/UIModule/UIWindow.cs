@@ -63,7 +63,7 @@ namespace TEngine
         public bool FullScreen { private set; get; }
 
         /// <summary>
-        /// 是内部资源无需AB加载。
+        /// 是内部资源无需AB加载。(直接走Resource加载)
         /// </summary>
         public bool FromResources { private set; get; }
         

@@ -32,7 +32,7 @@ namespace TEngine
         /// </summary>
         public Transform UIRoot => m_InstanceRoot;
 
-        public static Transform UIRootStatic;
+        public static Transform UIRootStatic;       // 生命周期转换，避免UIWindow对UIModule对象的依赖
 
         /// <summary>
         /// UI根节点。
